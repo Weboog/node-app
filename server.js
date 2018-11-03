@@ -13,7 +13,9 @@ hbs.registerHelper('copyright', ()=>{
 app.use((req, res, next)=>{
     let now = new Date().toString();
     let log = `${now}: ${req.method}: ${req.path}`;
-    fs.appendFile('server.log', log+'\n');
+    fs.appendFile('server.log', log+'\n', (err)=>{
+        
+    });
     next();
 });
 
