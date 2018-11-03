@@ -44,6 +44,12 @@ app.get('/user',(req, res)=>{
     });
 });
 
+app.get('/projects', (req, res)=>{
+    res.render('projects.hbs', {
+        title: 'Projects'
+    })
+})
+
 app.get('/about', (req, res)=>{
     res.render('about.hbs', {
         title: 'Contact Page',
